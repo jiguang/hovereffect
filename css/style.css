@@ -1,0 +1,86 @@
+@charset "utf-8";
+/**
+ * @desc 效果集合CSS
+ * @author laserji
+ * @mail jiguang1984#gmail.com
+ * @date 13-10-16
+ */
+
+/* common */
+*{ margin: 0; padding: 0;}
+img{display: block; border: 0 none;}
+ul{list-style: none;}
+.main{width: 1240px; margin: 20px auto; color: #333; overflow: hidden;}
+.main h1{font-size: 16px; margin-bottom: 5px;}
+.main a{color: #666;}
+.main .sub_tit{color: #999; margin-bottom: 15px;}
+.floor{overflow: hidden; margin-bottom: 20px;}
+.floor h2{font:bold 16px/1.5em \5FAE\8F6F\96C5\9ED1; margin-bottom: 20px; clear: both; color: #333; border-bottom: 2px dotted #ccc; padding-bottom: 8px;}
+
+/* effeckt */
+.effeckt-caption{width: 300px;}
+.effeckt-caption, .effeckt-caption *{ -moz-box-sizing: border-box;box-sizing: border-box;}
+.effeckt-caption,
+.effeckt-caption:nth-child(2n){ margin-right: 10px;}
+
+/* crossfade */
+#cf { position: relative; height: 480px; width: 960px; margin: 0 auto; cursor: pointer; }
+#cf img { position: absolute; left: 0; -webkit-transition: opacity 0.8s ease-in-out; }
+#cf img.top:hover { opacity: 0; }
+
+/* 翻页 */
+#hover_flip .container{width: 200px; height: 200px; }
+#hover_flip .container .inner{display: block; width: 100%; height: 100%; position: relative; overflow: hidden; }
+#hover_flip .container .mask{ position: absolute; bottom: 0; right: 0; width: 35px; height: 35px; overflow: hidden; box-shadow: 0 0 13px 0 rgba(0,0,0,0.37); -webkit-transition: width 0.5s ease-in-out, height 0.5s ease-in-out; -moz-transition: width 0.5s ease-in-out, height 0.5s ease-in-out; transition: width 0.5s ease-in-out, height 0.5s ease-in-out; }
+#hover_flip .container .mask .bg{position: absolute; bottom: 0; right: 0;}
+#hover_flip .container .white{ width: 284px; height: 284px; position: absolute; top: -227px; left: -223px; box-shadow: 3px 3px 10px 0 rgba(0,0,0,0.37); /*background-color: #fff;*/ z-index: 10; -webkit-transform:rotate(45deg); -moz-transform:rotate(45deg); transform: rotate(45deg); -webkit-transition: left 0.5s ease-in-out, top 0.5s ease-in-out, box-shadow 0.5s ease-in-out; -moz-transition: left 0.5s ease-in-out, top 0.5s ease-in-out, box-shadow 0.5s ease-in-out; transition: left 0.5s ease-in-out, top 0.5s ease-in-out, box-shadow 0.5s ease-in-out; background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 76%, rgba(211,211,211,1) 92%, rgba(255,255,255,1) 100%); /* FF3.6+ */ background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(242,242,242,1) 76%,rgba(211,211,211,1) 92%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */ background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(242,242,242,1) 76%,rgba(211,211,211,1) 92%,rgba(255,255,255,1) 100%); /* IE10+ */ background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(242,242,242,1) 76%,rgba(211,211,211,1) 92%,rgba(255,255,255,1) 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */ }
+#hover_flip .container .inner:hover .mask{ width: 166px; height: 166px; }
+#hover_flip .container .inner:hover .white{ left: -160px; top: -159px; box-shadow: 3px 3px 30px 10px rgba(0,0,0,0.4); }
+
+/* 边框效果 */
+.hproduct{float: left; width: 180px; overflow: hidden; margin-right: 20px; background-color: #fff; }
+.hproduct .url{ display: block; width: 180px; height: 180px;}
+.hproduct .fn_wrap{ padding: 10px 10px 0; }
+.border_none{}
+.border_2px{border: 2px solid #fff; padding: 8px; -webkit-transition: border-color 0.3s ease-in; -moz-transition: border-color 0.3s ease-in; -o-transition: border-color 0.3s ease-in; transition: border-color 0.3s ease-in;}
+.border_2px:hover{border-color: #d70000;}
+.border_big{padding: 8px; background-color: #fff;}
+.border_big:hover{background-color: #ccc;}
+
+/* 图片效果 */
+.pic_opacity .url img{opacity: 1; filter: alpha(opacity= 100); -webkit-transition: opacity 0.3s ease-in-out; -moz-transition: opacity 0.3s ease-in-out; -o-transition: opacity 0.3s ease-in-out; transition: opacity 0.3s ease-in-out;}
+.pic_opacity .url:hover img{opacity: .7; filter: alpha(opacity=70);}
+.pic_zoom .url{overflow: hidden;}
+.pic_zoom .url img{width: 180px; height: 180px;
+    -webkit-transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+    -moz-transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+    -o-transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;}
+.pic_zoom .url:hover img{width: 190px; height: 190px;}
+.pic_slide_up{width: 202px; height: 265px; overflow: hidden; position: relative;}
+.pic_slide_up .url img{position: absolute;left: 0; top: 0; -mowebkit-transition: top .25s ease; -moz-transition: top .25s ease; transition: top .25s ease;}
+.pic_slide_up .url:hover img{top: -265px;}
+.pic_slide_left{width: 245px; height: 174px; overflow: hidden;position: relative;}
+.pic_slide_left img{transition: margin-left .25s ease; -webkit-transition: margin-left .25s ease; -moz-transition: margin-left .25s ease;}
+.pic_slide_left a:hover img{margin-left: -59px;}
+
+.pic_cover .cell{display: block; width: 240px; height: 198px; border: 1px solid #f2f2f2; position: relative; overflow: hidden;}
+.pic_cover .cell span{display: block; width: 100%; text-align: center;}
+.pic_cover .cell:hover, .floor_lady_bag .cell:hover span{text-decoration: none;}
+.pic_cover .cell .photo{display: block; margin: 20px auto 0;}
+.pic_cover .cell .tit{ font:bold 16px/1.5em \5FAE\8F6F\96C5\9ED1, "Microsoft YaHei"; color: #90d621;}
+.pic_cover .cell .sub_tit{color: #666;}
+.pic_cover .cell .photo_hover{display: none; position: absolute; top:0; left:0;}
+.pic_cover .cell:hover .photo_hover{display: block;}
+
+/* 集群效果 */
+.collection_effect{width: 720px; overflow: hidden; *zoom:1;}
+.collection_effect ul li{float: left; margin-right: 0;}
+.collection_effect ul:hover .url{opacity: .7; filter: alpha(opacity=70);}
+.collection_effect ul li .url:hover{opacity: 1; filter: alpha(opacity=10);}
+
+.collection_dark{width: 720px; overflow: hidden; *zoom:1;}
+.collection_dark ul li{float: left; margin-right: 0;}
+.collection_dark .url{background: #000; /* dark background */}
+.collection_dark ul:hover .url img{opacity: .7; filter: alpha(opacity=70); -webkit-transition: opacity 0.2s ease-in-out; -moz-transition: opacity 0.2s ease-in-out; -o-transition: opacity 0.2s ease-in-out; transition: opacity 0.2s ease-in-out;}
+.collection_dark ul li .url:hover img{opacity: 1; filter: alpha(opacity=10);}
