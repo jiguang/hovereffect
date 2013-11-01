@@ -1,6 +1,6 @@
 @charset "utf-8";
 /**
- * @desc 效果集合CSS
+ * @desc 效果集合CSS - 重在搜集效果，代码不具备可参考性
  * @author laserji
  * @mail jiguang1984#gmail.com
  * @date 13-10-16
@@ -10,14 +10,15 @@
 *{ margin: 0; padding: 0;}
 img{display: block; border: 0 none;}
 ul{list-style: none;}
-.main{width: 1240px; margin: 20px auto; color: #333; overflow: hidden;}
+.main{width: 1240px; margin: 20px auto; color: #333; }
 .main h1{font-size: 16px; margin-bottom: 5px;}
 .main a{color: #666;}
 .main .sub_tit{color: #999; margin-bottom: 15px;}
-.floor{ margin-bottom: 20px;}
-.floor h2{height: 34px; font:bold 16px/26px \5FAE\8F6F\96C5\9ED1; margin-bottom: 20px; clear: both; color: #333; border-bottom: 2px dotted #ccc;}
+.floor{ margin-bottom: 20px;zoom: 1;}
+.floor:after { content: ' '; display: block; clear: both; height: 0; visibility: hidden; }
+.floor h2{height: 34px; font:bold 16px/26px \5FAE\8F6F\96C5\9ED1; margin-bottom: 10px; clear: both; color: #333; border-bottom: 2px dotted #ccc;}
 .floor .desc{font: normal 12px/26px \5B8B\4F53; color: #666; padding-left: 10px; vertical-align: top;}
-
+.floor ul{float: left; padding-top: 30px;}
 /* effeckt */
 .effeckt-caption{width: 300px;}
 .effeckt-caption, .effeckt-caption *{ -moz-box-sizing: border-box;box-sizing: border-box;}
@@ -29,9 +30,6 @@ ul{list-style: none;}
 #cf img { position: absolute; left: 0; -webkit-transition: opacity 0.8s ease-in-out; }
 #cf img.top:hover { opacity: 0; }
 
-.pic_effect_list{}
-.pic_effect_list ul{overflow: hidden; *zoom:1;}
-
 /* 翻页 */
 #hover_flip .container{width: 200px; height: 200px; }
 #hover_flip .container .inner{display: block; width: 100%; height: 100%; position: relative; overflow: hidden; }
@@ -42,15 +40,16 @@ ul{list-style: none;}
 #hover_flip .container .inner:hover .white{ left: -160px; top: -159px; box-shadow: 3px 3px 30px 10px rgba(0,0,0,0.4); }
 
 /* 边框效果 */
-.hproduct{float: left; width: 180px; overflow: hidden; margin-right: 10px; margin-bottom: 10px; background-color: #fff; }
+.hproduct{float: left; width: 180px; margin-right: 10px;background-color: #fff; position: relative; }
+.hproduct .item_desc{ position: absolute; top: -25px; left:0; color: #fff; background: #d70000; padding: 0 4px; border-radius: 2px;}
 .hproduct .url{ display: block; width: 180px; height: 180px;}
 .hproduct .fn_wrap{ padding: 10px 10px 0; }
 .border_none{}
 .border_2px{border: 2px solid #fff; padding: 8px; -webkit-transition: border-color 0.3s ease-in; -moz-transition: border-color 0.3s ease-in; -o-transition: border-color 0.3s ease-in; transition: border-color 0.3s ease-in;}
 .border_2px:hover{border-color: #d70000;}
 .border_big{padding: 8px; background-color: #fff;}
-.border_big:hover{background-color: #ccc;}
-.border_inner{position: relative; width: 200px; text-decoration: none;display: block;overflow: hidden;}
+.border_big:hover{background-color: #d7d7cc;}
+.border_inner{position: relative; width: 200px; text-decoration: none;display: block;}
 .fCt-det { width: 144px; height: 59px; background: #fff; background: rgba(255,255,255,.9); position: absolute; left: 17px; bottom: 21px; padding: 0 8px; overflow: hidden; border: 3px solid transparent; cursor: pointer; -moz-transition: border .3s ease-in .2s; -webkit-transition: border .3s ease-in .2s; -o-transition: border .3s ease-in .2s; -ms-transition: border .3s ease-in .2s; transition: border .3s ease-in .2s; }
 .fCt-aname { margin: 0; text-decoration: none; line-height: 30px; height: 30px; font-size: 14px; font-weight: 700; border-bottom: 1px dotted #000; overflow: hidden; text-align: center; width: 144px; color: #000; white-space: nowrap; text-overflow: ellipsis; -o-text-overflow: ellipsis; }
 .fCt-bname { text-decoration: none; height: 28px; line-height: 28px; text-align: center; font-size: 12px; font-family: Tahoma; overflow: hidden; width: 144px; color: #000; white-space: nowrap; text-overflow: ellipsis; -o-text-overflow: ellipsis; }
@@ -71,10 +70,12 @@ ul{list-style: none;}
     -o-transition: width 0.2s ease-in-out, height 0.2s ease-in-out, top 0.2s ease-in-out, left 0.2s ease-in-out;
     transition: width 0.2s ease-in-out, height 0.2s ease-in-out, top 0.2s ease-in-out, left 0.2s ease-in-out;}
 .pic_zoom .url:hover img{width: 190px; height: 190px; top: -5px; left:-5px;}
-.pic_slide_up{width: 202px; height: 265px; overflow: hidden; position: relative;}
+.pic_slide_up{width: 202px; height: 255px;}
+.pic_slide_up .url{width: 202px; height: 255px; overflow: hidden;position: relative;}
 .pic_slide_up .url img{position: absolute;left: 0; top: 0; -mowebkit-transition: top .25s ease; -moz-transition: top .25s ease; transition: top .25s ease;}
 .pic_slide_up .url:hover img{top: -265px;}
-.pic_slide_left{width: 245px; height: 174px; overflow: hidden;position: relative;}
+.pic_slide_left{width: 245px; height: 174px;}
+.pic_slide_left a.url{width: 245px; height: 174px; overflow: hidden;position: relative;}
 .pic_slide_left img{transition: margin-left .25s ease; -webkit-transition: margin-left .25s ease; -moz-transition: margin-left .25s ease;}
 .pic_slide_left a:hover img{margin-left: -59px;}
 
@@ -94,13 +95,21 @@ ul{list-style: none;}
 .pic_height .cell:hover{height: 240px;}
 
 /* 集群效果 */
-.collection_effect{width: 720px; overflow: hidden; *zoom:1;}
-.collection_effect ul li{float: left; margin-right: 0;}
+.collection_effect{overflow: hidden; *zoom:1;}
+.collection_effect ul li{float: left; margin-right: 2px;}
 .collection_effect ul:hover .url{opacity: .7; filter: alpha(opacity=70);}
 .collection_effect ul li .url:hover{opacity: 1; filter: alpha(opacity=10);}
 
-.collection_dark{width: 720px; overflow: hidden; *zoom:1;}
-.collection_dark ul li{float: left; margin-right: 0;}
+.collection_dark{ overflow: hidden; *zoom:1;}
+.collection_dark ul li{float: left; margin-right: 2px;}
 .collection_dark .url{background: #000; /* dark background */}
 .collection_dark ul:hover .url img{opacity: .7; filter: alpha(opacity=70); -webkit-transition: opacity 0.2s ease-in-out; -moz-transition: opacity 0.2s ease-in-out; -o-transition: opacity 0.2s ease-in-out; transition: opacity 0.2s ease-in-out;}
 .collection_dark ul li .url:hover img{opacity: 1; filter: alpha(opacity=10);}
+
+.collection_effect_up{}
+.collection_effect_up li{ margin-right: 2px; position: relative; top:0; -webkit-transition: top 0.3s ease-out; -moz-transition: top 0.3s ease-out; -o-transition: top 0.3s ease-out; transition: top 0.3s ease-out;}
+.collection_effect_up li:hover{top: -20px;}
+
+.collection_effect_rotate{}
+.collection_effect_rotate li{ margin-right: 20px;  -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out;}
+.collection_effect_rotate li:hover{-webkit-transform: rotate(-13deg);}
