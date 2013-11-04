@@ -8,6 +8,7 @@
 
 /* common */
 *{ margin: 0; padding: 0;}
+body{overflow: visible;}
 img{display: block; border: 0 none;}
 ul{list-style: none;}
 .main{width: 1240px; margin: 20px auto; color: #333; }
