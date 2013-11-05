@@ -42,7 +42,8 @@ ul{list-style: none;}
 
 /* ±ß¿òÐ§¹û */
 .hproduct{float: left; width: 180px; margin-right: 10px;background-color: #fff; position: relative; }
-.hproduct .item_desc{ position: absolute; top: -25px; left:0; color: #fff; background: #d70000; padding: 0 4px; border-radius: 2px;}
+.hproduct .item_desc{ height: 18px; line-height: 18px; position: absolute; top: -25px; left:0; color: #fff; background: #ee5567; border-radius: 2px; padding-right: 5px;}
+.hproduct .item_desc .num{float: left; height: 18px; line-height: 18px; padding: 0 5px;  background: #db4453; margin-right: 5px; border-top-left-radius: 2px; border-bottom-left-radius: 2px; font-family: arial;}
 .hproduct .url{ display: block; width: 180px; height: 180px;}
 .hproduct .fn_wrap{ padding: 10px 10px 0; }
 .border_none{}
